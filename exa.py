@@ -11,6 +11,9 @@ root.title('Examen Final')
 Magua = Label(text="GitHub: Bradleyivme",font=("Agency FB",8)).place(x=20,y=10)
 Saludo = Label(text="Bienvenido",font=("Agency FB",25)).place(x=150,y=20)
 
+def Resultado():
+    Label(root,text=""+entradaN.get()+entradaA.get(),font=("Agency FB", 14)).place(x=125,y=280)
+
 NNombre = Label(text="Nombre:",font=("Agency FB", 14)).place(x=125,y=80)
 #Creando la entrada de texto de Nombre
 entradaN = StringVar()
@@ -41,7 +44,7 @@ btnFuncion1 = Button(root, text = "Función 1",font=("Agency FB", 8), width=10).
 
 btnFuncion2 = Button(root, text = "Función 2",font=("Agency FB", 8), width=10).place(x=140,y=240)
 
-btnFuncion3 = Button(root, text = "Función 3",font=("Agency FB", 8), width=10).place(x=190,y=240)
+btnFuncion3 = Button(root, text = "Función 3",command=Resultado,font=("Agency FB", 8), width=10).place(x=190,y=240)
 
 btnFuncion4 = Button(root, text = "Función 4",font=("Agency FB", 8), width=10).place(x=240,y=240)
 
