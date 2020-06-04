@@ -31,6 +31,11 @@ MMes = Label(text="Mes:",font=("Agency FB", 14)).place(x=146,y=170)
 entradaM = StringVar()
 txtUsuario = Entry(root,textvariable=entradaM).place(x=180,y=178)
 
+AAño = Label(text="Año:",font=("Agency FB", 14)).place(x=146,y=200)
+#Creando la entrada de texto del Año de nacimiento
+entradaAA = StringVar()
+txtUsuario = Entry(root,textvariable=entradaAA).place(x=180,y=208)
+
 
 
 root.mainloop()
