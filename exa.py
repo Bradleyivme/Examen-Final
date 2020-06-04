@@ -21,4 +21,9 @@ AApellido = Label(text="Apellido:",font=("Agency FB", 14)).place(x=125,y=110)
 entradaA = StringVar()
 txtUsuario = Entry(root,textvariable=entradaA).place(x=180,y=118)
 
+DDia = Label(text="Día:",font=("Agency FB", 14)).place(x=150,y=140)
+#Creando la entrada de texto del Día de nacimiento
+entradaD = StringVar()
+txtUsuario = Entry(root,textvariable=entradaD).place(x=180,y=148)
+
 root.mainloop()
