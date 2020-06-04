@@ -16,4 +16,9 @@ NNombre = Label(text="Nombre:",font=("Agency FB", 14)).place(x=125,y=80)
 entradaN = StringVar()
 txtUsuario = Entry(root,textvariable=entradaN).place(x=180,y=88)
 
+AApellido = Label(text="Apellido:",font=("Agency FB", 14)).place(x=125,y=110)
+#Creando la entrada de texto del Apellido
+entradaA = StringVar()
+txtUsuario = Entry(root,textvariable=entradaA).place(x=180,y=118)
+
 root.mainloop()
