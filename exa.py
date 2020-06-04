@@ -45,5 +45,6 @@ btnFuncion3 = Button(root, text = "Función 3",font=("Agency FB", 8), width=10).
 
 btnFuncion4 = Button(root, text = "Función 4",font=("Agency FB", 8), width=10).place(x=240,y=240)
 
+btnFuncion5 = Button(root, text = "Función 5",font=("Agency FB", 8), width=10).place(x=290,y=240)
 
 root.mainloop()
