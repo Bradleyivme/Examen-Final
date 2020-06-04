@@ -26,4 +26,11 @@ DDia = Label(text="Día:",font=("Agency FB", 14)).place(x=150,y=140)
 entradaD = StringVar()
 txtUsuario = Entry(root,textvariable=entradaD).place(x=180,y=148)
 
+MMes = Label(text="Mes:",font=("Agency FB", 14)).place(x=146,y=170)
+#Creando la entrada de texto del Mes de nacimiento
+entradaM = StringVar()
+txtUsuario = Entry(root,textvariable=entradaM).place(x=180,y=178)
+
+
+
 root.mainloop()
