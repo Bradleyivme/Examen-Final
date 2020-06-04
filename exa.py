@@ -36,6 +36,9 @@ AAño = Label(text="Año:",font=("Agency FB", 14)).place(x=146,y=200)
 entradaAA = StringVar()
 txtUsuario = Entry(root,textvariable=entradaAA).place(x=180,y=208)
 
+#Creación de los botones, servirán para formar funciones.
+btnFuncion1 = Button(root, text = "Función 1",font=("Agency FB", 8), width=10).place(x=90,y=240)
+
 
 
 root.mainloop()
