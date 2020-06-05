@@ -49,6 +49,13 @@ Año.grid(row=6, column=1, columnspan=2)
 txtUsuarioAA = Entry(root)
 txtUsuarioAA.grid(row=6, column=3, columnspan=4, sticky= W + E)
 
+
+#Función de reversa, el texto lo pega al revés.
+def textos():
+    text20 = txtUsuarioN.get()+" "+txtUsuarioA.get()
+    text20 = text20[::-1]
+    Resultado["text"] = txtUsuarioN.get() + " " + txtUsuarioA.get() + " al revés es: " + text20
+
 #Creación de los botones, servirán para llamar funciones.
 btnFuncion1 = Button(root, text = "Función 1",font=("Agency FB", 8), width=10)
 btnFuncion1.grid(row=7, column=1)
@@ -62,7 +69,7 @@ btnFuncion3.grid(row=7, column=3)
 btnFuncion4 = Button(root, text = "Función 4",font=("Agency FB", 8), width=10)
 btnFuncion4.grid(row=7, column=4)
 
-btnFuncion5 = Button(root, text = "Función 5",font=("Agency FB", 8), width=10)
+btnFuncion5 = Button(root, text = "Función 5",command=textos,font=("Agency FB", 8), width=10)
 btnFuncion5.grid(row=7, column=5)
 
 Resultado = Label(root,text="Aquí estoy",font=("Agency FB", 14))
