@@ -101,10 +101,10 @@ def textos():
 btnFuncion1 = Button(root, text = "Función 1",font=("Agency FB", 8), width=10)
 btnFuncion1.grid(row=7, column=1)
 
-btnFuncion2 = Button(root, text = "Función 2",font=("Agency FB", 8), width=10)
+btnFuncion2 = Button(root, text = "Función 2",command=díasvividos,font=("Agency FB", 8), width=10)
 btnFuncion2.grid(row=7, column=2)
 
-btnFuncion3 = Button(root, text = "Función 3",font=("Agency FB", 8), width=10)
+btnFuncion3 = Button(root, text = "Función 3",command=PareImpar,font=("Agency FB", 8), width=10)
 btnFuncion3.grid(row=7, column=3)
 
 btnFuncion4 = Button(root, text = "Función 4",font=("Agency FB", 8), width=10)
@@ -113,7 +113,7 @@ btnFuncion4.grid(row=7, column=4)
 btnFuncion5 = Button(root, text = "Función 5",command=textos,font=("Agency FB", 8), width=10)
 btnFuncion5.grid(row=7, column=5)
 
-Resultado = Label(root,text="Aquí estoy",font=("Agency FB", 14))
+Resultado = Label(root,font=("Agency FB", 14))
 Resultado.grid(row=8, column=1, columnspan=6)
 
 root.mainloop()
