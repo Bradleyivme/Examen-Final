@@ -65,4 +65,7 @@ btnFuncion4.grid(row=7, column=4)
 btnFuncion5 = Button(root, text = "Función 5",font=("Agency FB", 8), width=10)
 btnFuncion5.grid(row=7, column=5)
 
+Resultado = Label(root,text="Aquí estoy",font=("Agency FB", 14))
+Resultado.grid(row=8, column=1, columnspan=6)
+
 root.mainloop()
