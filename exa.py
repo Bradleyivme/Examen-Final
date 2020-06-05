@@ -51,6 +51,30 @@ Año.grid(row=6, column=1, columnspan=2)
 txtUsuarioAA = Entry(root)
 txtUsuarioAA.grid(row=6, column=3, columnspan=4, sticky= W + E)
 
+#Función de verifiación de número pares en el nombre y apellido del usuario
+def PareImpar():
+    
+    NombreV = f"{txtUsuarioN.get()}"
+    ApellidoV = f"{txtUsuarioA.get()}"
+
+    NumerosofN = len(NombreV)
+    NumerosofA = len(ApellidoV)
+  
+    if NumerosofN % 2 == 0:
+        c3 = f"{NombreV} su nombre es de par"
+    else:
+        c3 = f"{NombreV} su nombre es de impar"
+
+    if NumerosofA % 2 == 0:
+        c4 = f"{ApellidoV} su apellido es par."
+    else:
+        c4 = f"{ApellidoV} su apellido es de impar."
+
+    Salida2 = f"{c3} y  {c4} "
+
+    Resultado["text"] = Salida2
+
+
 #Función de días vividos según, la fecha que ingrese el usuario
 def díasvividos():
     fechaString = f"{txtUsuarioAA.get()}-{txtUsuarioD.get()}-{txtUsuarioM.get()}"
@@ -65,6 +89,7 @@ def díasvividos():
     Salida = f"Usted nacio el {dato} y ha vivido {Salida1} días."
 
     Resultado["text"] = Salida
+
 
 #Función de reversa, el texto lo pega al revés.
 def textos():
