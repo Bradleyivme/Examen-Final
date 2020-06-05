@@ -1,4 +1,6 @@
 from tkinter import *
+from datetime import date
+from datetime import datetime
 
 root = Tk()
 
@@ -49,6 +51,20 @@ Año.grid(row=6, column=1, columnspan=2)
 txtUsuarioAA = Entry(root)
 txtUsuarioAA.grid(row=6, column=3, columnspan=4, sticky= W + E)
 
+#Función de días vividos según, la fecha que ingrese el usuario
+def díasvividos():
+    fechaString = f"{txtUsuarioAA.get()}-{txtUsuarioD.get()}-{txtUsuarioM.get()}"
+    dato = datetime.strptime(fechaString, '%Y-%m-%d')
+
+    today= datetime.today()
+    
+    c1 = today
+    c2 = dato
+    Salida1 = abs(c1-c2).days 
+
+    Salida = f"Usted nacio el {dato} y ha vivido {Salida1} días."
+
+    Resultado["text"] = Salida
 
 #Función de reversa, el texto lo pega al revés.
 def textos():
