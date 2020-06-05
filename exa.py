@@ -8,41 +8,46 @@ alto = 400
 root.geometry(str(ancho)+'x'+str(alto))
 root.title('Examen Final')
 
-Magua = Label(text="GitHub: Bradleyivme",font=("Agency FB",8)).place(x=20,y=10)
-Saludo = Label(text="Bienvenido",font=("Agency FB",25)).place(x=150,y=20)
+Magua = Label(text="GitHub: Bradleyivme",font=("Agency FB",8))
+Saludo = Label(text="Bienvenido",font=("Agency FB",25))
 
 def Resultado():
-    Label(root,text=""+entradaN.get()+entradaA.get(),font=("Agency FB", 14)).place(x=125,y=280)
+    Label(root,text=""+entradaN.get()+entradaA.get(),font=("Agency FB", 14))
 
-NNombre = Label(text="Nombre:",font=("Agency FB", 14)).place(x=125,y=80)
+NNombre = Label(text="Nombre:",font=("Agency FB", 14))
 #Creando la entrada de texto de Nombre
-txtUsuario = Entry(root).place(x=180,y=88)
+txtUsuario = Entry(root)
 
-AApellido = Label(text="Apellido:",font=("Agency FB", 14)).place(x=125,y=110)
+AApellido = Label(text="Apellido:",font=("Agency FB", 14))
 #Creando la entrada de texto del Apellido
-txtUsuario = Entry(root).place(x=180,y=118)
+txtUsuario = Entry(root)
 
-DDia = Label(text="Día:",font=("Agency FB", 14)).place(x=150,y=140)
+DDia = Label(text="Día:",font=("Agency FB", 14))
 #Creando la entrada de texto del Día de nacimiento
-txtUsuario = Entry(root).place(x=180,y=148)
+txtUsuario = Entry(root)
 
-MMes = Label(text="Mes:",font=("Agency FB", 14)).place(x=146,y=170)
+MMes = Label(text="Mes:",font=("Agency FB", 14))
 #Creando la entrada de texto del Mes de nacimiento
-txtUsuario = Entry(root).place(x=180,y=178)
+txtUsuario = Entry(root)
 
-AAño = Label(text="Año:",font=("Agency FB", 14)).place(x=146,y=200)
+AAño = Label(text="Año:",font=("Agency FB", 14))
 #Creando la entrada de texto del Año de nacimiento
-txtUsuario = Entry(root).place(x=180,y=208)
+txtUsuario = Entry(root)
 
 #Creación de los botones, servirán para formar funciones.
-btnFuncion1 = Button(root, text = "Función 1",font=("Agency FB", 8), width=10).place(x=90,y=240)
+btnFuncion1 = Button(root, text = "Función 1",font=("Agency FB", 8), width=10)
 
-btnFuncion2 = Button(root, text = "Función 2",font=("Agency FB", 8), width=10).place(x=140,y=240)
 
-btnFuncion3 = Button(root, text = "Función 3",command=Resultado,font=("Agency FB", 8), width=10).place(x=190,y=240)
+btnFuncion2 = Button(root, text = "Función 2",font=("Agency FB", 8), width=10)
 
-btnFuncion4 = Button(root, text = "Función 4",font=("Agency FB", 8), width=10).place(x=240,y=240)
 
-btnFuncion5 = Button(root, text = "Función 5",font=("Agency FB", 8), width=10).place(x=290,y=240)
+btnFuncion3 = Button(root, text = "Función 3",font=("Agency FB", 8), width=10)
+
+
+btnFuncion4 = Button(root, text = "Función 4",font=("Agency FB", 8), width=10)
+
+
+btnFuncion5 = Button(root, text = "Función 5",font=("Agency FB", 8), width=10)
+
 
 root.mainloop()
