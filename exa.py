@@ -21,30 +21,35 @@ Saludo.grid(row=1, column=1, columnspan=6)
 
 #Etiquetas principales
 
+#Etiqueta de su Nombre
 Nombre = Label(text="Nombre:",font=("Agency FB", 14))
 Nombre.grid(row=2, column=1, columnspan=2)
 #Creando la entrada de texto de Nombre
 txtUsuarioN = Entry(root)
 txtUsuarioN.grid(row=2, column=3, columnspan=4, sticky= W + E)
 
+#Etiqueta de su Apellido
 Apellido = Label(text="Apellido:",font=("Agency FB", 14))
 Apellido.grid(row=3, column=1, columnspan=2)
 #Creando la entrada de texto del Apellido
 txtUsuarioA = Entry(root)
 txtUsuarioA.grid(row=3, column=3, columnspan=4, sticky= W + E)
 
+#Etiqueta del día
 Dia = Label(text="Día:",font=("Agency FB", 14))
 Dia.grid(row=4, column=1, columnspan=2)
 #Creando la entrada de texto del Día de nacimiento
 txtUsuarioD = Entry(root)
 txtUsuarioD.grid(row=4, column=3, columnspan=4, sticky= W + E)
 
+#Etiqueta del Mes
 Mes = Label(text="Mes:",font=("Agency FB", 14))
 Mes.grid(row=5, column=1, columnspan=2)
 #Creando la entrada de texto del Mes de nacimiento
 txtUsuarioM = Entry(root)
 txtUsuarioM.grid(row=5, column=3, columnspan=4, sticky= W + E)
 
+#Etiqueta del Año
 Año = Label(text="Año:",font=("Agency FB", 14))
 Año.grid(row=6, column=1, columnspan=2)
 #Creando la entrada de texto del Año de nacimiento
@@ -102,6 +107,22 @@ def díasvividos():
 
     Resultado["text"] = Salida
 
+#Función de verificar e imprimir la cantidad de vocales y consonantes que tiene el Nombre y Apellido
+def VocConso():
+    Nombree=str(txtUsuarioN.get())
+    Apellidoo=str(txtUsuarioA.get())
+    SumaV = 0
+    for vccn in Nombree:
+        if vccn == 'a' or vccn =='A' or vccn =='e' or vccn =='E' or vccn =='i' or vccn =='I' or vccn =='o' or vccn =="O" or vccn =="u" or vccn =="U":
+            SumaV += 1
+    for vccn in Apellidoo:
+        if vccn == 'a' or vccn =='A' or vccn =='e' or vccn =='E' or vccn =='i' or vccn =='I' or vccn =='o' or vccn =="O" or vccn =="u" or vccn =="U":
+            SumaV += 1
+    Rvccn=len(Nombree)
+    Rvccn2=len(Apellidoo)
+    SalidaConso=Rvccn+Rvccn2-SumaV
+
+    Resultado['text'] = Nombree + " " + Apellidoo + ' tiene {} vocales y {} consonantes.'.format(SumaV,SalidaConso)
 
 #Función de reversa, el texto lo pega al revés.
 def textos():
@@ -119,12 +140,13 @@ btnFuncion2.grid(row=7, column=2)
 btnFuncion3 = Button(root, text = "Función 3",command=PareImpar,font=("Agency FB", 8), width=10)
 btnFuncion3.grid(row=7, column=3)
 
-btnFuncion4 = Button(root, text = "Función 4",font=("Agency FB", 8), width=10)
+btnFuncion4 = Button(root, text = "Función 4",command=VocConso,font=("Agency FB", 8), width=10)
 btnFuncion4.grid(row=7, column=4)
 
 btnFuncion5 = Button(root, text = "Función 5",command=textos,font=("Agency FB", 8), width=10)
 btnFuncion5.grid(row=7, column=5)
 
+#Salida de texto sobre las funciones
 Resultado = Label(root, text="Aquí se mostrarán las funciones", font=("Agency FB", 10))
 Resultado.grid(row=8, column=1, columnspan=6)
 
