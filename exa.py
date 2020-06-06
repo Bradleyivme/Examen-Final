@@ -51,6 +51,18 @@ Año.grid(row=6, column=1, columnspan=2)
 txtUsuarioAA = Entry(root)
 txtUsuarioAA.grid(row=6, column=3, columnspan=4, sticky= W + E)
 
+#Función que convierte la fecha ingresada a valores binarios.
+def Nbina():
+    DDia=int(txtUsuarioD.get())
+    MMes=int(txtUsuarioM.get())
+    AAño=int(txtUsuarioAA.get())
+    BinDD=format(DDia, '0b' )
+    BinMM=format(MMes, '0b')
+    BinAA=format(AAño, '0b')
+
+    Resultado['text'] = 'Fecha a número binario: {}/{}/{} = {}/{}/{}'.format(DDia,MMes,AAño,BinDD,BinMM,BinAA)
+
+
 #Función de verifiación de número pares en el nombre y apellido del usuario
 def PareImpar():
     
@@ -61,16 +73,16 @@ def PareImpar():
     NumerosofA = len(ApellidoV)
   
     if NumerosofN % 2 == 0:
-        c3 = f"{NombreV} su nombre es de par"
+        c3 = f"{NombreV} su nombre es par"
     else:
-        c3 = f"{NombreV} su nombre es de impar"
+        c3 = f"{NombreV} su nombre es impar"
 
     if NumerosofA % 2 == 0:
         c4 = f"{ApellidoV} su apellido es par."
     else:
-        c4 = f"{ApellidoV} su apellido es de impar."
+        c4 = f"{ApellidoV} su apellido es impar."
 
-    Salida2 = f"{c3} y  {c4} "
+    Salida2 = f"{c3} y {c4} "
 
     Resultado["text"] = Salida2
 
@@ -86,7 +98,7 @@ def díasvividos():
     c2 = dato
     Salida1 = abs(c1-c2).days 
 
-    Salida = f"Usted nacio el {dato} y ha vivido {Salida1} días."
+    Salida = f"Usted nació el {dato} y ha vivido {Salida1} días."
 
     Resultado["text"] = Salida
 
@@ -98,7 +110,7 @@ def textos():
     Resultado["text"] = txtUsuarioN.get() + " " + txtUsuarioA.get() + " al revés es: " + text20
 
 #Creación de los botones, servirán para llamar funciones.
-btnFuncion1 = Button(root, text = "Función 1",font=("Agency FB", 8), width=10)
+btnFuncion1 = Button(root, text = "Función 1",command=Nbina,font=("Agency FB", 8), width=10)
 btnFuncion1.grid(row=7, column=1)
 
 btnFuncion2 = Button(root, text = "Función 2",command=díasvividos,font=("Agency FB", 8), width=10)
@@ -113,7 +125,7 @@ btnFuncion4.grid(row=7, column=4)
 btnFuncion5 = Button(root, text = "Función 5",command=textos,font=("Agency FB", 8), width=10)
 btnFuncion5.grid(row=7, column=5)
 
-Resultado = Label(root,font=("Agency FB", 14))
+Resultado = Label(root, text="Aquí se mostrarán las funciones", font=("Agency FB", 10))
 Resultado.grid(row=8, column=1, columnspan=6)
 
 root.mainloop()
